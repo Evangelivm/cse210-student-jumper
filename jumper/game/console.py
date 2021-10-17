@@ -1,0 +1,44 @@
+import time
+class Console:
+    """A code template for a computer console. The responsibility of this 
+    class of objects is to get text or numerical input and display text output.
+    
+    Stereotype:
+        Service Provider, Interfacer
+
+    Attributes:
+        prompt (string): The prompt to display on each line.
+    """
+     
+    def introduction(self):
+        """Gets text input from the user through the screen.
+
+        Args: 
+            self (Screen): An instance of Screen.
+            prompt (string): The prompt to display to the user.
+
+        Returns:
+            string: The user's input as text.
+        """
+        print(f"█░░░█ █▀▀ █░░ ▄▀▀ ▄▀▀▄ ██▄██ █▀▀ . ▀█▀ ▄▀▀▄ . ▀█▀ █░█ █▀▀ . ▀▀█ █░░█ ██▄██ █▀▄ █▀▀ █▀▄\
+\n█▄█▄█ █▀▀ █░░ █░░ █░░█ █░▀░█ █▀▀ . ░█░ █░░█ . ░█░ █▀█ █▀▀ . ▄░█ █░░█ █░▀░█ █▀░ █▀▀ █▀▄\
+\n▀▀░▀▀ ▀▀▀ ▀▀▀ ░▀▀ ░▀▀░ ▀░░░▀ ▀▀▀ . ░▀░ ░▀▀░ . ░▀░ ▀░▀ ▀▀▀ . ░▀░ ░▀▀░ ▀░░░▀ ▀░░ ▀▀▀ ▀░▀\n")
+        print("Loading")
+        time.sleep(0.5)
+        print(".") 
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+
+        
+    def write(self, text):
+        """Displays the given text on the screen. 
+
+        Args: 
+            self (Screen): An instance of Screen.
+            text (string): The text to display.
+        """
+        return input(text)
