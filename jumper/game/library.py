@@ -19,13 +19,13 @@ class Library:
         Args:
             self (Library): an instance of Library.
         """
-        self.words = ["cup", "house", "mice","computer"]
-        self.spell_words = [['_','u','_'], ['_','_','u','_','_'], ['_','_','_','e'], ['_','o','_','p','_','_','e','_']]
+        self.words = ["cup", "house", "mice","computer", "table", "chair"]
+        self.spell_words = [['_','u','_'], ['_','_','u','_','_'], ['_','_','_','e'], ['_','o','_','p','_','_','e','_']["_", "a", "_", "_", "e"] ["c" "_" "a" "_" "_"]]
         self.number = 0
         self.turn = 0
     def choose_word(self):
         if self.turn == 0:
-            self.number = random.randint(0,3)
+            self.number = random.randint(0,5)
             self.turn = self.turn + 1
             return
         else:
