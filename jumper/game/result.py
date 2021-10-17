@@ -4,23 +4,29 @@ class Result:
     the result of the parachute in the game.
     
     Stereotype:
-        
+        Service Provider
 
     Attributes:
-        location (integer): The location of the Seeker (1-1000).
-        distance (list): The distance travelled with each move.
+        turn_number (integer): Count the number of errors.
+        close (boolean): Determines if the game should end.
     """
 
     def __init__(self):
         """Class constructor. Declares and initializes instance attributes.
 
         Args:
-            self (Seeker): An instance of Seeker.
+            self (Result): An instance of Result.
         """
         self.turn_number = 0
         self.close = False
 
     def stage(self,result):
+        """The class constructor.
+        
+        Args:
+            self (Result): an instance of Result.
+            result(string): Helps determine the state of the parachute as the game progresses.
+        """
         if result == "correct" and self.turn_number == 0 :
             print(f"\n  ___ \
             \n /___\ \

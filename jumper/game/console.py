@@ -7,15 +7,14 @@ class Console:
         Service Provider, Interfacer
 
     Attributes:
-        prompt (string): The prompt to display on each line.
+        text (string): The prompt to display on each line.
     """
      
     def introduction(self):
         """Gets text input from the user through the screen.
 
         Args: 
-            self (Screen): An instance of Screen.
-            prompt (string): The prompt to display to the user.
+            self (Console): An instance of Console.
 
         Returns:
             string: The user's input as text.
@@ -38,7 +37,7 @@ class Console:
         """Displays the given text on the screen. 
 
         Args: 
-            self (Screen): An instance of Screen.
+            self (Console): An instance of Console.
             text (string): The text to display.
         """
         return input(text)

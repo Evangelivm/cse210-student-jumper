@@ -11,9 +11,10 @@ class Director:
 
     Attributes:
         console (Console): An instance of the class of objects known as Console.
+        result (Result): An instance of the class of objects known as Result.
         keep_playing (boolean): Whether or not the game can continue.
-        seeker (Seeker): An instance of the class of objects known as Seeker.
-        hider (Hider): An instance of the class of objects known as Hider.
+        seeker (Seeker): An instance of the class of objects known as Library.
+        first (number): It helps to differentiate the first turn from the others.
     """
 
     def __init__(self):
@@ -42,9 +43,7 @@ class Director:
 
 
     def get_inputs(self):
-        """Gets the inputs at the beginning of each round of play. In this case,
-        that means moving the seeker to a new location.
-
+        """Gets the inputs at the beginning of each round of play. 
         Args:
             self (Director): An instance of Director.
         """
@@ -65,13 +64,11 @@ class Director:
             self.result.stage(check_status)
         
     def do_updates(self):
-        """Updates the important game information for each round of play. In 
-        this case, that means the hider watches the seeker.
-
+        """Updates the important game information for each round of play. 
         Args:
             self (Director): An instance of Director.
         """
-        if (self.result.turn_number == 4) or (self.result.close == True):
+        if self.result.close == True:
             self.keep_playing = False
         else:
             self.keep_playing = True
