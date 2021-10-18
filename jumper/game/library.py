@@ -21,7 +21,7 @@ class Library:
             self (Library): an instance of Library.
         """
         self.words = ["cup", "house", "mice","computer", "table", "chair"]
-        self.spell_words = [['_','u','_'], ['_','_','u','_','_'], ['_','_','_','e'], ['_','o','_','p','_','_','e','_'],["_", "a", "_", "_", "e"],["c" "_" "a" "_" "_"]]
+        self.spell_words = [['_','u','_'], ['_','_','u','_','_'], ['_','_','_','e'], ['_','o','_','p','_','_','e','_'],["_", "a", "_", "_", "e"],["c", "_", "a", "_", "_"]]
         self.number = 0
         self.turn = 0
     def choose_word(self):
